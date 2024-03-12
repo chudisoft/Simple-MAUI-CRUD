@@ -50,8 +50,13 @@ public partial class MainFlyoutPage : FlyoutPage
 
             // Resolve the page instance using the service provider
             Page page = (Page)_serviceProvider.GetRequiredService(item.TargetType);
+
+            // Close the flyout menu with platform check
+            if (Device.RuntimePlatform != Device.WinUI)
+            {
+                IsPresented = false;
+            }
             Detail = new NavigationPage(page);
-            IsPresented = false; // Close the flyout menu
             ((ListView)sender).SelectedItem = null; // Deselect item
         };
 
