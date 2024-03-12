@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleMAUICRUD.pages.CreateItemPage"
+             Title="CreateItemPage">
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="Back" Priority="0" Clicked="OnBackButtonClicked"/>-->
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Spacing="20" Padding="15">
+
+        <!-- Input Fields -->
+        <Entry x:Name="nameEntry" Placeholder="Name" />
+        <Entry x:Name="descriptionEntry" Placeholder="Description" />
+
+        <!-- Save Button -->
+        <Button Text="Save" Clicked="OnSaveClicked" />
+
+    </StackLayout>
+</ContentPage>

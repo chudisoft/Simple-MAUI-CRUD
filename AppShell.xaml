@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SimpleMAUICRUD.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SimpleMAUICRUD"
+    xmlns:pages="clr-namespace:SimpleMAUICRUD.pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Simple MAUI CRUD">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainFlyoutPage}"
+        Route="MainFlyoutPage" />
+
+    <ShellContent Route="CreateItemPage" ContentTemplate="{DataTemplate pages:CreateItemPage}" />
+    <ShellContent Route="ItemDetailPage" ContentTemplate="{DataTemplate pages:ItemDetailPage}" />
+
+    <!-- Example of a FlyoutItem that navigates to ItemListPage -->
+    <FlyoutItem Title="Item List"
+                Icon="list_icon.png"
+                Route="ItemListPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:ItemListPage}" />
+    </FlyoutItem>
+
+    <!-- Example of a FlyoutItem that navigates to CreateItemPage -->
+    <FlyoutItem Title="Create Item"
+                Icon="add_icon.png"
+                Route="CreateItemPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:CreateItemPage}" />
+    </FlyoutItem>
+</Shell>

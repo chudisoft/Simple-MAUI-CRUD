@@ -1,0 +1,16 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleMAUICRUD.pages.ItemDetailPage">
+
+    <StackLayout Spacing="20" Padding="15">
+
+        <!-- Input Fields -->
+        <Entry x:Name="nameEntry" Placeholder="Name" Text="{Binding Item.Name}" />
+        <Entry x:Name="descriptionEntry" Placeholder="Description" Text="{Binding Item.Description}" />
+
+        <!-- Update and Delete Buttons -->
+        <Button Text="Update" Clicked="UpdateClicked" />
+        <Button Text="Delete" Clicked="DeleteClicked" />
+
+    </StackLayout>
+</ContentPage>

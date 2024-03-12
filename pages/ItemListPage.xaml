@@ -1,0 +1,22 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleMAUICRUD.pages.ItemListPage">
+
+    <StackLayout Spacing="20" Padding="15">
+        <!-- Navigation Button -->
+        <Button Text="Add Item" Clicked="OnAddItemClicked" />
+
+        <!-- List to Display Items -->
+        <ListView x:Name="itemsListView"
+                  ItemsSource="{Binding Items}"
+                  SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding Description}"
+                              Tapped="OnItemTapped" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
